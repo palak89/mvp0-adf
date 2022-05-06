@@ -78,23 +78,30 @@
 				"outputs": [
 					{
 						"referenceName": "adls_output",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_qname": {
+								"value": "@pipeline().parameters.qname",
+								"type": "Expression"
+							},
+							"ds_seq": {
+								"value": "@pipeline().parameters.seq",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
 		"parameters": {
 			"msg": {
-				"type": "string",
-				"defaultValue": "test"
+				"type": "string"
 			},
 			"seq": {
-				"type": "string",
-				"defaultValue": "1"
+				"type": "string"
 			},
 			"qname": {
-				"type": "string",
-				"defaultValue": "test"
+				"type": "string"
 			}
 		},
 		"annotations": []
