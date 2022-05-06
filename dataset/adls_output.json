@@ -5,13 +5,21 @@
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"ds_qname": {
+				"type": "string"
+			},
+			"ds_seq": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@utcnow()",
+					"value": "@concat(dataset().ds_qname,' ',dataset().ds_seq,'.json')",
 					"type": "Expression"
 				},
 				"container": "test"
