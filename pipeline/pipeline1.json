@@ -85,13 +85,16 @@
 		],
 		"parameters": {
 			"msg": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "test"
 			},
 			"seq": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "1"
 			},
 			"qname": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "test"
 			}
 		},
 		"annotations": []
