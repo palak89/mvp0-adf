@@ -86,6 +86,12 @@
 		"parameters": {
 			"msg": {
 				"type": "string"
+			},
+			"seq": {
+				"type": "string"
+			},
+			"qname": {
+				"type": "string"
 			}
 		},
 		"annotations": []
